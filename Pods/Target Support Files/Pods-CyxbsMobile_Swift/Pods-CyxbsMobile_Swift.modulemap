@@ -1,0 +1,6 @@
+module Pods_CyxbsMobile_Swift {
+  umbrella header "Pods-CyxbsMobile_Swift-umbrella.h"
+
+  export *
+  module * { export * }
+}
