@@ -205,7 +205,6 @@
 				519BE3067E982CAA8753D88C /* Pods-CyxbsMobile_Swift.debug.xcconfig */,
 				0C1D2184BF8BBB5B44E0FDEC /* Pods-CyxbsMobile_Swift.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
