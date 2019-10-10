@@ -16,6 +16,8 @@
 		1A4D0361234DAA4D00C12ABD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4D035F234DAA4D00C12ABD /* LaunchScreen.storyboard */; };
 		1A4D036C234DAA4D00C12ABD /* CyxbsMobile_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4D036B234DAA4D00C12ABD /* CyxbsMobile_SwiftTests.swift */; };
 		1A4D0377234DAA4D00C12ABD /* CyxbsMobile_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4D0376234DAA4D00C12ABD /* CyxbsMobile_SwiftUITests.swift */; };
+		1AA4AE06234E238B00AFD24E /* PrefixHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA4AE05234E238B00AFD24E /* PrefixHeader.swift */; };
+		1AA4AE0A234E365100AFD24E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA4AE09234E365100AFD24E /* UIColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		1A4D0372234DAA4D00C12ABD /* CyxbsMobile_SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CyxbsMobile_SwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A4D0376234DAA4D00C12ABD /* CyxbsMobile_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyxbsMobile_SwiftUITests.swift; sourceTree = "<group>"; };
 		1A4D0378234DAA4D00C12ABD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AA4AE05234E238B00AFD24E /* PrefixHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefixHeader.swift; sourceTree = "<group>"; };
+		1AA4AE09234E365100AFD24E /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		2C158527457A41F30FAB1502 /* libPods-CyxbsMobile_Swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CyxbsMobile_Swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		519BE3067E982CAA8753D88C /* Pods-CyxbsMobile_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CyxbsMobile_Swift.debug.xcconfig"; path = "Target Support Files/Pods-CyxbsMobile_Swift/Pods-CyxbsMobile_Swift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,13 +110,15 @@
 		1A4D0353234DAA4A00C12ABD /* CyxbsMobile_Swift */ = {
 			isa = PBXGroup;
 			children = (
-				1AA4AE01234DAB2500AFD24E /* QA */,
 				1AA4ADFD234DAACA00AFD24E /* ClassSchedule */,
+				1AA4AE01234DAB2500AFD24E /* QA */,
+				1AA4AE07234E33F400AFD24E /* CustomTools */,
 				1A4D0354234DAA4A00C12ABD /* AppDelegate.swift */,
 				1A4D035A234DAA4A00C12ABD /* Main.storyboard */,
 				1A4D035D234DAA4D00C12ABD /* Assets.xcassets */,
 				1A4D035F234DAA4D00C12ABD /* LaunchScreen.storyboard */,
 				1A4D0362234DAA4D00C12ABD /* Info.plist */,
+				1AA4AE05234E238B00AFD24E /* PrefixHeader.swift */,
 			);
 			path = CyxbsMobile_Swift;
 			sourceTree = "<group>";
@@ -197,6 +203,22 @@
 			children = (
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1AA4AE07234E33F400AFD24E /* CustomTools */ = {
+			isa = PBXGroup;
+			children = (
+				1AA4AE08234E340200AFD24E /* Extension */,
+			);
+			path = CustomTools;
+			sourceTree = "<group>";
+		};
+		1AA4AE08234E340200AFD24E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1AA4AE09234E365100AFD24E /* UIColorExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		88D68794282BE7DFAFEC2E82 /* Pods */ = {
@@ -373,7 +395,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AA4AE06234E238B00AFD24E /* PrefixHeader.swift in Sources */,
 				1A4D0359234DAA4A00C12ABD /* QAMainViewController.swift in Sources */,
+				1AA4AE0A234E365100AFD24E /* UIColorExtension.swift in Sources */,
 				1A4D0355234DAA4A00C12ABD /* AppDelegate.swift in Sources */,
 				1A4D0357234DAA4A00C12ABD /* ClassScheduleViewController.swift in Sources */,
 			);
@@ -559,6 +583,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				"OTHER_SWIFT_FLAGS[arch=*]" = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mredrock.cyxbs.CyxbsMobile-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
